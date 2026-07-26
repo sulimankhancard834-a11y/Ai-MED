@@ -14,7 +14,7 @@ async function startServer() {
 
   function getAiClient(): GoogleGenAI {
     if (!aiClient) {
-      const key = process.env.GEMINI_API_KEY;
+      const key = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
       if (!key) {
         throw new Error('GEMINI_API_KEY environment variable is required');
       }
@@ -58,7 +58,7 @@ async function startServer() {
       });
 
       const response = await ai.models.generateContent({
-        model: 'gemini-2.5-pro',
+        model: 'gemini-1.5-pro',
         contents: formattedContents,
         config: {
           systemInstruction,

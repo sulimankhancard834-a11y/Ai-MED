@@ -136,32 +136,21 @@ export default function App() {
         {/* Sidebar */}
         <aside className="w-72 bg-black/20 border-r border-white/5 backdrop-blur-lg flex-col p-6 hidden lg:flex">
           <div className="mb-8">
-            <button className="w-full py-3 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 text-sm font-semibold transition-colors">
+            <button 
+              onClick={() => {
+                setMessages([]);
+                setError(null);
+              }}
+              className="w-full py-3 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 text-sm font-semibold transition-colors"
+            >
               + New Study Session
             </button>
           </div>
 
-          <div className="flex-1">
-            <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">Current Modules</h3>
-            <nav className="space-y-2">
-              <div className="p-3 bg-white/5 rounded-lg border border-white/10 flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                <span className="text-sm text-slate-200">Cardiovascular Physiology</span>
-              </div>
-              <div className="p-3 hover:bg-white/5 rounded-lg border border-transparent flex items-center gap-3 text-slate-400 cursor-pointer">
-                <div className="w-2 h-2 rounded-full bg-slate-600"></div>
-                <span className="text-sm">Renal Histology</span>
-              </div>
-              <div className="p-3 hover:bg-white/5 rounded-lg border border-transparent flex items-center gap-3 text-slate-400 cursor-pointer">
-                <div className="w-2 h-2 rounded-full bg-slate-600"></div>
-                <span className="text-sm">Clinical Case Studies</span>
-              </div>
-            </nav>
-          </div>
-
-          <div className="p-4 bg-slate-900/80 rounded-xl border border-white/10">
-            <p className="text-[11px] leading-relaxed text-slate-300">
-              <span className="text-cyan-400 font-bold uppercase">Setup Tip:</span> To activate live AI, go to <span className="text-white font-mono italic">Settings &gt; Environment Variables</span> and paste your <span className="text-white font-mono">GOOGLE_GENERATIVE_AI_API_KEY</span>.
+          <div className="flex-1 flex flex-col justify-center items-center opacity-50">
+            <Stethoscope className="w-16 h-16 text-slate-700 mb-4" />
+            <p className="text-xs text-slate-500 text-center px-4">
+              Your study session history will appear here.
             </p>
           </div>
         </aside>
