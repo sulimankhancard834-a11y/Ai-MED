@@ -122,7 +122,7 @@ export default function App() {
             <p className="text-[10px] text-slate-400 uppercase tracking-wider">Network Status</p>
             <div className="flex items-center gap-2 justify-end">
               <div className="w-2 h-2 rounded-full bg-green-500"></div>
-              <p className="text-xs font-mono text-slate-300">Gemini-1.5-Pro</p>
+              <p className="text-xs font-mono text-slate-300">Gemini-2.0-Flash</p>
             </div>
           </div>
           <div className="w-10 h-10 rounded-full bg-slate-800 border border-white/20 flex items-center justify-center">
