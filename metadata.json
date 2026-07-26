@@ -1,0 +1,6 @@
+{
+  "name": "AI MED Tutor",
+  "description": "A comprehensive medical education tutor and echocardiography interpretation tool for KMU Institute of Health Sciences Swabi medical students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
